@@ -26,7 +26,7 @@
 //
 namespace fpdi {
     if (!class_exists('\\TCPDF', false)) {
-        class fpdi_bridge extends \fpdf\FPDF
+        class fpdi_bridge extends \tFPDF
         {
         }
     } else {
@@ -96,7 +96,8 @@ namespace fpdi {
                             case 'n':
                                 $out .= chr(10);
                                 break;
-                            case '':
+                            case '
+':
                                 if ($count != $n - 1 && $s[$count + 1] == '
 ') {
                                     $count++;
